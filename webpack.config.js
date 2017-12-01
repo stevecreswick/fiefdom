@@ -9,6 +9,8 @@ const extractSass = new ExtractTextPlugin({
     disable: process.env.NODE_ENV === "development"
 });
 
+const webpack = require('webpack');
+
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -28,12 +30,15 @@ module.exports = {
   // index.html is used as a template in which it'll inject bundled app.
   plugins: [
     extractSass,
-    
+
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html'),
     }),
 
     new ExtractTextPlugin('style.bundle.css'), // CSS will be extracted to this bundle file -> ADDED IN THIS STEP
+
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   // Loaders configuration -> ADDED IN THIS STEP
@@ -110,7 +115,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
 
-  // devServer: {
-  //   contentBase: paths.SRC,
-  // }
+  devServer: {
+    // contentBase: paths.SRC,
+    hot: true
+  }
 };
