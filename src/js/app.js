@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import '../css/style.css'; // Import CSS -> ADDED IN THIS STEP
+import '../css/style.scss'; // Import CSS -> ADDED IN THIS STEP
 
 import hanSolo from '../assets/hansolo.png';
 
