@@ -10,7 +10,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
   }
 
   var $ = cheerio.load(markup);
-  var bundleSrc = '/bundle.js';
+  var bundleSrc = '/public/bundle.js';
 
   $('head').prepend('');
   $('body').append( '<script src="' + bundleSrc + '"></script>' );
