@@ -32,6 +32,7 @@ module.exports = {
     extractSass,
 
     new HtmlWebpackPlugin({
+      inject: true,
       template: path.join(paths.SRC, 'index.html'),
     }),
 
