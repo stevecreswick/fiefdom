@@ -5,9 +5,6 @@ var publicPath = express.static(path.join(__dirname, 'public'), { redirect : fal
 
 var herokuUrl = 'https://fiefdom.herokuapp.com'
 
-
-console.log(process.env.NODE_ENV);
-
 var indexPath  = path.join(__dirname, 'public/index.html');
 app.use(publicPath);
 
@@ -29,10 +26,10 @@ app.get('/', function(request, response) {
   response.sendFile(indexPath);
 });
 
-app.get('*', function(request, response) {
-  response.set( 'Cache-Control', 'no-cache' );
-
-  response.sendFile(indexPath);
-});
+// app.get('*', function(request, response) {
+//   response.set( 'Cache-Control', 'no-cache' );
+//
+//   response.sendFile(indexPath);
+// });
 
 app.listen(process.env.PORT || 8080);
