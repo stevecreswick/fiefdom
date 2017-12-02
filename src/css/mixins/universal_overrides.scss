@@ -1,0 +1,17 @@
+// Override Default List Styles
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+// Override Default Link Styles
+a {
+  text-decoration: none;
+
+   &:visited {
+     color: inherit;
+   }
+}

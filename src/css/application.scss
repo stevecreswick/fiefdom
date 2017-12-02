@@ -1,0 +1,30 @@
+// Mixins
+@import "mixins/universal_overrides";
+@import "mixins/flex_container";
+
+// Navigation
+@import "navigation/index";
+
+// Game Board
+@import "gameboard/index";
+
+
+body {
+  background-color: slategrey;
+
+  .page-container {
+    background-color: blanchedalmond;
+  }
+
+  div {
+    background-color: teal;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
