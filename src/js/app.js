@@ -10,7 +10,7 @@ export default class Hello extends Component {
     return (
       <div>
         Han Solo
-        Boba Fett
+        Boba
 
         <img src={ hanSolo } alt='Han Solo' />
       </div>
