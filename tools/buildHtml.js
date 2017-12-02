@@ -1,6 +1,6 @@
-import fs from 'fs';
-import cheerio from 'cheerio';
-import colors from 'colors';
+var fs = require( 'fs' );
+var cheerio = require( 'cheerio' );
+var colors = require( 'colors' );
 
 /*eslint-disable no-console */
 
@@ -9,7 +9,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
     return console.log(err);
   }
 
-  const $ = cheerio.load(markup);
+  var $ = cheerio.load(markup);
   $('head').prepend('');
 
   fs.writeFile('public/index.html', $.html(), 'utf8', function (err) {

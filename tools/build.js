@@ -1,7 +1,7 @@
 /*eslint-disable no-console */
-import webpack from 'webpack';
-import webpackConfig from '../webpack.config.prod';
-import colors from 'colors';
+var webpack = require( 'webpack' );
+var webpackConfig = require( '../webpack.config.prod' );
+var colors = require( 'colors' );
 
 process.env.NODE_ENV = 'production';
 
@@ -13,7 +13,7 @@ webpack(webpackConfig).run((err, stats) => {
     return 1;
   }
 
-  const jsonStats = stats.toJson();
+  var jsonStats = stats.toJson();
 
   if (jsonStats.hasErrors) {
     return jsonStats.errors.map(error => console.log(error.red));
