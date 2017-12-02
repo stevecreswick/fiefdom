@@ -1,0 +1,26 @@
+.navigation {
+  background-color: aquamarine;
+  width: 100%;
+  @include flex-container(row, nowrap, center, flex-start);
+
+  .logo {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    margin: 0 8px;
+  }
+
+  .navigation-bar {
+    background-color: cornflowerblue;
+
+    .navigation-links {
+      @include flex-container(row, nowrap, flex-start, flex-start);
+
+      .navigation-link {
+        padding: 0 8px;
+        background-color: red;
+
+      }
+    }
+  }
+}
