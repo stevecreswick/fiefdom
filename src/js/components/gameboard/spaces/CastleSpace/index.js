@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 
-const Board = () =>
-  <div className="board">
-    BOARD
+const CastleSpace = () =>
+  <div className="space">
+    o
   </div>
 
-export default Board;
+export default CastleSpace;

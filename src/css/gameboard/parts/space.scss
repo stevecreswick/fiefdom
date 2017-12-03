@@ -1,0 +1,6 @@
+.space {
+  @include flex-container(column, nowrap, center, center);
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+}

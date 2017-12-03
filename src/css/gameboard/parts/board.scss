@@ -1,3 +1,7 @@
 .board {
   border: 3px solid yellow;
+
+  .row {
+    @include flex-container(row, nowrap, flex-start, center);
+  }
 }
